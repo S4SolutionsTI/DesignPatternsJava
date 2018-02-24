@@ -1,6 +1,8 @@
 
 public class DiscountForOverFiveHundredDollars implements Discount {
 
+    private Discount discount;
+
     @Override
     public double discount(Budget budget) {
 	if (budget.getValue() > 500) {
@@ -12,7 +14,7 @@ public class DiscountForOverFiveHundredDollars implements Discount {
 
     @Override
     public void setNext(Discount discount) {
-	// TODO Auto-generated method stub
+	this.discount = discount;
 
     }
 
