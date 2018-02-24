@@ -5,8 +5,8 @@ class TaxCalculatorTest {
     @Test
     void test() {
 	double value = 3.14;
-	String icms = "ICMS";
-	String iss = "ISS";
+	Tax icms = new ICMS();
+	Tax iss = new ISS();
 
 	Budget budget = new Budget(value);
 	TaxCalculator ci = new TaxCalculator(budget);

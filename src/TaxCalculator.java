@@ -7,15 +7,10 @@ public class TaxCalculator {
 	this.budget = budget;
     }
 
-    public void doCalculate(Budget budget, String tax) {
+    public void doCalculate(Budget budget, Tax tax) {
 
-	if (tax.equals("ICMS")) {
-	    double icms = budget.getValue() * 0.1;
-	    System.out.println(icms);
-	} else if (tax.equals("ISS")) {
-	    double iss = budget.getValue() * 0.6;
-	    System.out.println(iss);
-	}
+	double value = tax.calculate(budget);
+	System.out.println(value);
     }
 
 }
