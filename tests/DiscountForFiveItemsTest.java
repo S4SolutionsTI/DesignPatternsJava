@@ -9,6 +9,11 @@ class DiscountForFiveItemsTest {
 	Discount discount = new DiscountForFiveItems();
 	double value = 3.14;
 	Budget budget = new Budget(value);
+	String name = "Jose";
+	double valueItem = 600.0;
+	Item i = new Item(name, valueItem);
+	budget.addItem(i);
+	
 	double d = discount.discount(budget);
 	assertEquals(d, value *0.1);
     }
