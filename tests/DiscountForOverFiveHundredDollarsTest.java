@@ -1,12 +1,12 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class DiscountForFiveItemsTest {
+class DiscountForOverFiveHundredDollarsTest {
 
     @Test
     void test() {
-	Discount discount = new DiscountForFiveItems();
+	Discount discount = new DiscountForOverFiveHundredDollars();
 	double value = 3.14;
 	Budget budget = new Budget(value);
 	String name = "Jose";
@@ -18,9 +18,8 @@ class DiscountForFiveItemsTest {
 	budget.addItem(i);
 	budget.addItem(i);
 	budget.addItem(i);
-	discount.setNext(new DiscountForOverFiveHundredDollars());
+	discount.setNext(new DiscountForFiveItems());
 	double d = discount.discount(budget);
-
 	assertEquals(d, value *0.1);
     }
 
