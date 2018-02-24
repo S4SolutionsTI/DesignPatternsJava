@@ -13,7 +13,11 @@ class DiscountForFiveItemsTest {
 	double valueItem = 600.0;
 	Item i = new Item(name, valueItem);
 	budget.addItem(i);
-	
+	budget.addItem(i);
+	budget.addItem(i);
+	budget.addItem(i);
+	budget.addItem(i);
+	budget.addItem(i);
 	double d = discount.discount(budget);
 	assertEquals(d, value *0.1);
     }
