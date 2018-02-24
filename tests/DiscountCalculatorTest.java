@@ -6,7 +6,11 @@ class DiscountCalculatorTest {
     void test() {
 	double value = 3.14;
 	Budget budget = new Budget(value);
-	DiscountForFiveItems dffi = new DiscountForFiveItems();
+	DiscountCalculator calc = new DiscountCalculator();
+	budget.addItem(new Item("Pen", 5.43));
+	budget.addItem(new Item("Pencil", 3.43));
+	double d = calc.calculate(budget);
+
     }
 
 }

@@ -9,7 +9,7 @@ public class DiscountForOverFiveHundredDollars implements Discount {
 	    return budget.getValue() * 0.07;
 	}
 	
-	return 0;
+	return discount.discount(budget);
     }
 
     @Override
