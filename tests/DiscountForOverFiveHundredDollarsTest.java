@@ -7,10 +7,10 @@ class DiscountForOverFiveHundredDollarsTest {
     @Test
     void test() {
 	Discount discount = new DiscountForOverFiveHundredDollars();
-	double value = 3.14;
+	double value = 600;
 	Budget budget = new Budget(value);
 	String name = "Jose";
-	double valueItem = 600.0;
+	double valueItem = 5.0;
 	Item i = new Item(name, valueItem);
 	budget.addItem(i);
 	budget.addItem(i);
