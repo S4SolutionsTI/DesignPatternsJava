@@ -3,7 +3,10 @@ public class ISS extends Tax{///
 
     public ISS(Tax otherTax) {
 	super(otherTax);
-	// TODO Auto-generated constructor stub
+    }
+    
+    public ISS() {
+	super();
     }
 
     public double calculate(Budget budget) {
